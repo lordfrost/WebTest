@@ -5,5 +5,5 @@ from doit.models import BlogPost
 def archive(request):
     posts = BlogPost.objects.all()
     t = loader.get_template("first")
-    c = Context({'posts' : posts})
+    c = Context({'posts': posts})
     return HttpResponse(t.render(c))
